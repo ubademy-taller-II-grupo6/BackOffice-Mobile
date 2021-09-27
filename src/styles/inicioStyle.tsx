@@ -12,6 +12,7 @@ const inicioStyle = StyleSheet.create({
         resizeMode: 'stretch',
     },
     bottomLogin:{
+        marginTop:50,
         width:'75%',
         height:50,
         display:'flex',
@@ -50,6 +51,26 @@ const inicioStyle = StyleSheet.create({
     },
     registrar:{
         fontWeight:'700',
+    },
+    contentInputs:{
+        height:'100%',
+        display:'flex',
+        alignContent:'center',
+        justifyContent:'center',
+        alignItems:'center',
+       
+    },
+    contentInput:{
+        backgroundColor:'#565656',
+        marginTop:10,
+        width:'75%',
+    },
+    inputText:{
+        opacity:1,
+        height:50,
+        width:200,
+        color:'white', 
+        
     }
 })
 

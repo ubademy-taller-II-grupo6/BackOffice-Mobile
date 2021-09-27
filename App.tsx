@@ -1,12 +1,12 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
-
-import { Inicio } from './src/screems/Inicio';
+import 'react-native-gesture-handler';
+import { InicioNavigator } from './src/navigators/InicioNavigator';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Inicio />
+      <InicioNavigator />
     </NavigationContainer>
   )
 }

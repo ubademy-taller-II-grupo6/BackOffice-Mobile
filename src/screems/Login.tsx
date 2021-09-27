@@ -1,31 +1,24 @@
-import React from 'react'
-import { Image, Text, View } from 'react-native'
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
-import inicioStyle from '../styles/inicioStyle';
-import registerStyle from '../styles/registerStyle';
+import { Image, Text, View } from "react-native"
+import React from 'react';
 
-export const Registro = () => {
-    let logoApiUbademy = '../assets/ubademyLogo.png';
+import inicioStyle from "../styles/inicioStyle";
+import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
+import registerStyle from '../styles/registerStyle';
+let logoApiUbademy = '../assets/ubademyLogo.png';
+
+export const Login = () => {
+    
     return (
         <View style={inicioStyle.contentInputs}>
             <Image 
                 style={registerStyle.imgLogo}
                 source={require(logoApiUbademy)} />
-            <View 
-                style={inicioStyle.contentInput}
-            >
-                <TextInput
-                        style={inicioStyle.inputText}
-                        placeholder='User name'
-                        placeholderTextColor = "white"
-                />     
-            </View>
-            <View 
+           <View 
                 style={inicioStyle.contentInput}
             >
                 <TextInput
                     style={inicioStyle.inputText}
-                    placeholder='Mail'
+                    placeholder='User'
                     placeholderTextColor = "white"
                 />    
             </View>
@@ -39,15 +32,6 @@ export const Registro = () => {
                 />    
             </View>
             <View 
-                style={inicioStyle.contentInput}
-            >
-                <TextInput
-                    style={inicioStyle.inputText}
-                    placeholder='re-Password'
-                    placeholderTextColor = "white"
-                />    
-            </View>
-            <View 
                 style={
                     inicioStyle.bottomLogin
                 }
@@ -57,6 +41,7 @@ export const Registro = () => {
                         <Text style={inicioStyle.textBottomColor}>REGISTRARSE</Text>
                 </TouchableOpacity>    
             </View>
+           <Text>Recover Password</Text>
         </View>
     )
 }

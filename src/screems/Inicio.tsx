@@ -1,13 +1,16 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import inicioStyle from '../styles/inicioStyle';
+interface Props extends StackScreenProps<any,any>{
 
-export const Inicio = () => {
+    };
+export const Inicio = ({navigation}:Props) => {
     let imageTop = '../assets/header.png';
+    
     let logoApiUbademy = '../assets/ubademyLogo.png';
-    let navegarLoguin = () =>{
-
-    }
+    let navegarLoguin = () => navigation.navigate('Login')
+    let navigateRegistro = () => navigation.navigate('Registro')
     return (
         <View>
             <Image 
@@ -21,7 +24,7 @@ export const Inicio = () => {
             >
                 <TouchableOpacity 
                     style={inicioStyle.bottomLogin}
-                    onPress={()=>{console.log("ddfe")}}
+                    onPress={navegarLoguin}
                 >
                         <Text style={inicioStyle.textBottomColor}>LOGUIN</Text>
                 </TouchableOpacity>    
@@ -35,9 +38,14 @@ export const Inicio = () => {
                 style={inicioStyle.registrarContent}
             >
                 <Text>¿No tienes cuenta?</Text>
-                <Text style={inicioStyle.registrar}> Registrate</Text>    
+                <Text 
+                    style={inicioStyle.registrar}
+                    onPress={navigateRegistro}
+                > Registrate</Text>    
             </View>
-            
+            <View>
+                
+            </View>
         </View>
     )
 }
